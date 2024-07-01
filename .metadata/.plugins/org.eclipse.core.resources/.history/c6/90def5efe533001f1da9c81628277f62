@@ -1,0 +1,13 @@
+package RestTesting.RestTesting;
+
+import org.testng.annotations.Test;
+
+public class FirstAPITest {
+	
+	@Test
+	public void testAPI{
+		
+	}
+	
+
+}

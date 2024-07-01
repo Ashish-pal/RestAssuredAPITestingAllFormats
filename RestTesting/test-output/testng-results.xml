@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="1" failed="1" skipped="3">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-30T17:27:27 IST" name="Default suite" finished-at="2024-06-30T17:27:32 IST" duration-ms="4973">
+    <groups>
+    </groups>
+    <test started-at="2024-06-30T17:27:27 IST" name="Default test" finished-at="2024-06-30T17:27:32 IST" duration-ms="4973">
+      <class name="RestTesting.RestTesting.UploadFileUsingAPI">
+        <test-method is-config="true" signature="setup()[pri:0, instance:RestTesting.RestTesting.UploadFileUsingAPI@55a147cc]" started-at="2024-06-30T17:27:27 IST" name="setup" finished-at="2024-06-30T17:27:27 IST" duration-ms="472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="getPetsPendingAPI()[pri:0, instance:RestTesting.RestTesting.UploadFileUsingAPI@55a147cc]" started-at="2024-06-30T17:27:27 IST" name="getPetsPendingAPI" finished-at="2024-06-30T17:27:31 IST" duration-ms="3232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPetsPendingAPI -->
+        <test-method signature="postPetAPITest()[pri:0, instance:RestTesting.RestTesting.UploadFileUsingAPI@55a147cc]" started-at="2024-06-30T17:27:31 IST" name="postPetAPITest" finished-at="2024-06-30T17:27:32 IST" duration-ms="1202" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [400]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at org.testng.Assert.assertEquals(Assert.java:1429)
+at RestTesting.RestTesting.UploadFileUsingAPI.postPetAPITest(UploadFileUsingAPI.java:54)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postPetAPITest -->
+        <test-method signature="postUpdateAPITest()[pri:0, instance:RestTesting.RestTesting.UploadFileUsingAPI@55a147cc]" started-at="2024-06-30T17:27:32 IST" name="postUpdateAPITest" finished-at="2024-06-30T17:27:32 IST" depends-on-methods="RestTesting.RestTesting.UploadFileUsingAPI.postPetAPITest" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method RestTesting.RestTesting.UploadFileUsingAPI.postUpdateAPITest() on instance RestTesting.RestTesting.UploadFileUsingAPI@55a147cc depends on not successfully finished methods 
+[RestTesting.RestTesting.UploadFileUsingAPI.postPetAPITest() on instance RestTesting.RestTesting.UploadFileUsingAPI@55a147cc]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method RestTesting.RestTesting.UploadFileUsingAPI.postUpdateAPITest() on instance RestTesting.RestTesting.UploadFileUsingAPI@55a147cc depends on not successfully finished methods 
+[RestTesting.RestTesting.UploadFileUsingAPI.postPetAPITest() on instance RestTesting.RestTesting.UploadFileUsingAPI@55a147cc]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postUpdateAPITest -->
+        <test-method signature="putPetAPITest()[pri:0, instance:RestTesting.RestTesting.UploadFileUsingAPI@55a147cc]" started-at="2024-06-30T17:27:32 IST" name="putPetAPITest" finished-at="2024-06-30T17:27:32 IST" depends-on-methods="RestTesting.RestTesting.UploadFileUsingAPI.postPetAPITest" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method RestTesting.RestTesting.UploadFileUsingAPI.putPetAPITest() on instance RestTesting.RestTesting.UploadFileUsingAPI@55a147cc depends on not successfully finished methods 
+[RestTesting.RestTesting.UploadFileUsingAPI.postPetAPITest() on instance RestTesting.RestTesting.UploadFileUsingAPI@55a147cc]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method RestTesting.RestTesting.UploadFileUsingAPI.putPetAPITest() on instance RestTesting.RestTesting.UploadFileUsingAPI@55a147cc depends on not successfully finished methods 
+[RestTesting.RestTesting.UploadFileUsingAPI.postPetAPITest() on instance RestTesting.RestTesting.UploadFileUsingAPI@55a147cc]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- putPetAPITest -->
+        <test-method signature="deletePetAPITest()[pri:0, instance:RestTesting.RestTesting.UploadFileUsingAPI@55a147cc]" started-at="2024-06-30T17:27:32 IST" name="deletePetAPITest" finished-at="2024-06-30T17:27:32 IST" depends-on-methods="RestTesting.RestTesting.UploadFileUsingAPI.putPetAPITest" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method RestTesting.RestTesting.UploadFileUsingAPI.deletePetAPITest() on instance RestTesting.RestTesting.UploadFileUsingAPI@55a147cc depends on not successfully finished methods 
+[RestTesting.RestTesting.UploadFileUsingAPI.putPetAPITest() on instance RestTesting.RestTesting.UploadFileUsingAPI@55a147cc]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method RestTesting.RestTesting.UploadFileUsingAPI.deletePetAPITest() on instance RestTesting.RestTesting.UploadFileUsingAPI@55a147cc depends on not successfully finished methods 
+[RestTesting.RestTesting.UploadFileUsingAPI.putPetAPITest() on instance RestTesting.RestTesting.UploadFileUsingAPI@55a147cc]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePetAPITest -->
+      </class> <!-- RestTesting.RestTesting.UploadFileUsingAPI -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

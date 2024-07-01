@@ -1,0 +1,52 @@
+package RestTesting.RestTesting;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+import static io.restassured.RestAssured.given;
+
+public class FirstAPI {
+
+	@BeforeClass
+	public void setup() {
+		RestAssured.baseURI = "https://petstore.swagger.io";
+	}
+
+	@Test
+	public void getPetsPendingAPI() {
+		Response responses = given().header("accept", "application/xml").when()
+				.get("/v2/pet/findByStatus?status=pending");
+		Assert.assertEquals(responses.statusCode(), 200);
+		Assert.assertEquals(responses.contentType(), "application/json");
+	}
+	
+	@Test
+	public void postPetAPITest() {
+		String jsonBody = "'{\r\n"
+				+ "  \"id\": 0,\r\n"
+				+ "  \"category\": {\r\n"
+				+ "    \"id\": 0,\r\n"
+				+ "    \"name\": \"string\"\r\n"
+				+ "  },\r\n"
+				+ "  \"name\": \"doggie2\",\r\n"
+				+ "  \"photoUrls\": [\r\n"
+				+ "    \"string\"\r\n"
+				+ "  ],\r\n"
+				+ "  \"tags\": [\r\n"
+				+ "    {\r\n"
+				+ "      \"id\": 0,\r\n"
+				+ "      \"name\": \"string\"\r\n"
+				+ "    }\r\n"
+				+ "  ],\r\n"
+				+ "  \"status\": \"available\"\r\n"
+				+ "}'";
+		
+		Response response = given().header("accept","application/json").header("Content-Type","application/json").
+				body(jsonBody).when().post("/v2/pet/");
+		System.out.println(response.asPrettyString());
+	}
+}

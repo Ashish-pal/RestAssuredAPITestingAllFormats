@@ -1,0 +1,20 @@
+package RestTesting.RestTesting;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import junit.framework.Assert;
+
+import static io.restassured.RestAssured.given;
+
+public class FirstAPI {
+
+	@Test
+	public void testAPI() {
+		RestAssured.baseURI = "https://petstore.swagger.io";
+		Response responses = given().when().get("/v2/pet/findByStatus?status=pending");
+		System.out.println(responses.asString());
+		Assert.assertEquals(responses.statusCode(), 200);
+	}
+}

@@ -1,0 +1,61 @@
+package RestTesting.RestTesting;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+import static io.restassured.RestAssured.given;
+
+public class FirstAPI {
+
+	@BeforeClass
+	public void setup() {
+		RestAssured.baseURI = "https://petstore.swagger.io";
+	}
+
+	@Test
+	public void getPetsPendingAPI() {
+		Response responses = given().header("accept", "application/json").when()
+				.get("/v2/pet/findByStatus?status=available");
+		Assert.assertEquals(responses.statusCode(), 200);
+		Assert.assertEquals(responses.contentType(), "application/json");
+	}
+
+	@Test
+	public void postPetAPITest() {
+		String jsonBody = "'{" + "  \"id\": 0," + "  \"category\": {" + "    \"id\": 0," + "    \"name\": \"string\""
+				+ "  }," + "  \"name\": \"doggie2\"," + "  \"photoUrls\": [" + "    \"string\"" + "  ],"
+				+ "  \"tags\": [" + "    {" + "      \"id\": 0," + "      \"name\": \"string\"" + "    }" + "  ],"
+				+ "  \"status\": \"available\"" + "}'";
+
+		Response response = given().header("accept", "application/json").header("Content-Type", "application/json")
+				.body(jsonBody).when().post("/v2/pet/");
+		System.out.println(response.asPrettyString());
+		Assert.assertEquals(response.statusCode(), 200);
+		Assert.assertEquals(response.contentType(), "application/json");
+	}
+
+	@Test
+	public void putPetAPITest() {
+		String jsonBody = "{" + "  \"id\": 9223372036854664000," + "  \"category\": {" + "    \"id\": 0,"
+				+ "    \"name\": \"string\"" + "  }," + "  \"name\": \"doggieeeee\"," + "  \"photoUrls\": ["
+				+ "    \"string\"" + "  ]," + "  \"tags\": [" + "    {" + "      \"id\": 0,"
+				+ "      \"name\": \"string\"" + "    }" + "  ]," + "  \"status\": \"available\"" + "}'";
+
+		Response response = given().header("accept", "application/json").header("Content-Type", "application/json")
+				.body(jsonBody).when().put("/v2/pet/");
+		System.out.println(response.asPrettyString());
+		Assert.assertEquals(response.statusCode(), 200);
+		Assert.assertEquals(response.contentType(), "application/json");
+	}
+
+	@Test
+	public void deletePetAPITest() {
+		Response response = given().header("accept", "application/json").when().delete("/v2/pet/9223372036854664000");
+		Assert.assertEquals(response.statusCode(), 200);
+		Assert.assertEquals(response.contentType(), "application/json");
+	}
+}

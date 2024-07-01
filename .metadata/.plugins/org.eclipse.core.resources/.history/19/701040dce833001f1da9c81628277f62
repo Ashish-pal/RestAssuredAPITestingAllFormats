@@ -1,0 +1,17 @@
+package RestTesting.RestTesting;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+
+public class FirstAPI {
+	
+	@Test
+	public void testAPI(){
+	
+		RestAssured.baseURI = "https://petstore.swagger.io";
+		
+		given().when()
+	}
+}
